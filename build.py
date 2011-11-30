@@ -11,7 +11,7 @@ from itertools import chain
 
 """Minifies JS and copies files to build/ directory""" 
 
-YUI = "tools/yuicompressor-2.4.2.jar"
+YUI = join("tools", "yuicompressor-2.4.2.jar")
 MINIFY_RE = re.compile(r'<!--\s*MINIFY:\s*-->((?:<script.+</script>|\s)+)<!--\s*TO:\s*(.+)-->')
 SCRIPT_RE = re.compile(r'<script type="text/javascript" src="([^"]+)"></script>')
 
@@ -60,7 +60,7 @@ def build(src_dir, build_dir):
     minified_paths = set(chain(*to_minify.values()))
     for filename in listdir(src_dir):
         filepath = join(src_dir, filename)
-        if not filepath == "src/index.html" and not filepath in minified_paths:
+        if not filepath == join(src_dir, 'index.html') and not filepath in minified_paths:
             print "  + %s" % filepath
             copy(filepath, build_dir)
     
