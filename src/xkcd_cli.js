@@ -220,7 +220,7 @@ Filesystem = {
 Filesystem['blog'] = linkFile('http://nushackers.org');
 Filesystem['forums'] = linkFile('http://groups.google.com/group/nushackers?hl=en_US');
 Filesystem['about'] = linkFile('http://nushackers.org/about/');
-Filesystem['code'] = linkFile('http://github.com/nushackers');
+Filesystem['code'] = linkFile('http://github.com/nushackers/xkcdfools');
 TerminalShell.pwd = Filesystem;
 
 TerminalShell.commands['cd'] = function(terminal, path) {
