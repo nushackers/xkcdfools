@@ -316,7 +316,7 @@ TerminalShell.commands['wget'] = TerminalShell.commands['curl'] = function(termi
 };
 
 TerminalShell.commands['unixkcd'] = function(terminal, nick) {
-	TerminalShell.commands['curl'](terminal, "http://www.xkcd.com/unixkcd/");
+	TerminalShell.commands['curl'](terminal, window.location.href);
 };
 
 TerminalShell.commands['apt-get'] = function(terminal, subcmd) {
