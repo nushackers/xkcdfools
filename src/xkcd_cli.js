@@ -598,7 +598,7 @@ $(document).ready(function() {
 		} else if (konamiCount == 3) {
 			shake($('#screen'));
 		} else if (konamiCount == 4) {
-			$('#screen').css('background', 'url(/unixkcd/over9000.png) center no-repeat');
+			$('#screen').css('background', 'url(over9000.png) center no-repeat');
 		}
 
 		$('<div>')
