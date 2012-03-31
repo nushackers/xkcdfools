@@ -188,20 +188,22 @@ function linkFile(url) {
 
 Filesystem = {
 	'welcome.txt': {type:'file', read:function(terminal) {
-		terminal.print($('<h4>').text('CONGRATULATIONS!'));
-		terminal.print('You\'ve found this site!');
-		terminal.print('You\'re invited to the NUS Hackers Welcome Tea on the 02-09-2011');
+		terminal.print($('<h4>').text('Welcome to NUS Hackers!'));
+		terminal.print('We <3 Unix very much!');
+		terminal.print($('<span>').html('Win an iPad 3 at our HackyWin competition: <a href="http://nushackers.org/hackywin">http://nushackers.org/hacknwin</a>'));
 	}},
 	'license.txt': {type:'file', read:function(terminal) {
 		terminal.print($('<p>').html('Client-side logic for Wordpress CLI theme :: <a href="http://thrind.xamai.ca/">R. McFarland, 2006, 2007, 2008</a>'));
 		terminal.print($('<p>').html('jQuery rewrite and overhaul :: <a href="http://www.chromakode.com/">Chromakode, 2010</a>'));
-		terminal.print($('<p>').html('Modified by <a href="http://nushackers.org">NUS Hackers 2011</a>'));
+		terminal.print($('<p>').html('Modified by <a href="http://real.nushackers.org">NUS Hackers 2012</a>'));
 		terminal.print();
 		$.each([
 			'This program is free software; you can redistribute it and/or',
 			'modify it under the terms of the GNU General Public License',
 			'as published by the Free Software Foundation; either version 2',
 			'of the License, or (at your option) any later version.',
+			'',
+			'We love Richard Stallman and Richard Stallman loves us.',
 			'',
 			'This program is distributed in the hope that it will be useful,',
 			'but WITHOUT ANY WARRANTY; without even the implied warranty of',
@@ -216,9 +218,9 @@ Filesystem = {
 		});
 	}}
 };
-Filesystem['blog'] = linkFile('http://nushackers.org');
+Filesystem['blog'] = linkFile('http://real.nushackers.org');
 Filesystem['forums'] = linkFile('http://groups.google.com/group/nushackers?hl=en_US');
-Filesystem['about'] = linkFile('http://nushackers.org/about/');
+Filesystem['about'] = linkFile('http://real.nushackers.org/about/');
 Filesystem['code'] = linkFile('http://github.com/nushackers');
 TerminalShell.pwd = Filesystem;
 
